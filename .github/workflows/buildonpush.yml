@@ -22,5 +22,5 @@ jobs:
         uses: snickerbockers/submodules-init@v4
       - name: Build with Maven
         run: mvn clean package
-      - name: List target folder
+      - name: List target folder (test)
         run: ls target/
