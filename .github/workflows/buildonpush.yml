@@ -18,6 +18,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+      - name: (Hacky) method of compiling Geyser with Floodgate first
+        run: |
+          git clone https://github.com/Tim203/Geyser.git GeyserFloodgate
+          cd GeyserFloodgate
+          mvn clean install
+          cd ..
       - name: submodules-init
         uses: snickerbockers/submodules-init@v4
       - name: Build with Maven
